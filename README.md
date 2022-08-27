@@ -103,6 +103,8 @@ A continuación puede verse una vista previa del resultado de este flow. (Se deb
         "hidden": false
     }
 ]
+![image](https://user-images.githubusercontent.com/111370930/187046925-fb40dcc4-5eab-4121-bff0-2d264aabc3a4.png)
+
 --------------------------
 
 Evidencias
