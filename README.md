@@ -6,7 +6,7 @@ Creacion del segundo Flow con NoteRed flow3-noteRed Agregando tercer flow con no
 
 Introduccion
 
-Se crea un flow quemuestra los datos de fecha y hora n el navegador cada en pantalla utilizando noteRed
+Se crea un flow quemuestra los datos de fecha y hora en el navegador cada en pantalla utilizando noteRed y dashboard
 
 Material Necesario
 
@@ -29,7 +29,30 @@ Arrancar NodeRed con el comando node-red Clonar el flow2 anteriormente Exportar 
 
 // Lo que está después de “//” son comentarios // Crea un objeto Date a partir del payload enviado por timestamp var date = new Date(msg.payload); // Cambia el payload para que sea una fecha con formato msg.payload = date.toString(); // Regresa el mensaje para que se envíe al sigueinte nodo return msg; despues dar Done.
 -------------------------------
-Poner instrucciones
+Se clona el flow 2 y se cambia el nombre a flow3
+Para ellos se importa y descarga flow2
+Movemos el bloque debug en el nuevo flow 3
+Y procedemos a instalar complementos de la paleta dashboard
+Haciendo clic en el menú de hamburguesa principal de note-red
+En administrador de paleta
+En el buscador de la ventana emergente tecleamos note-red dashboard
+E instalamos el programa
+Y cerramos
+Posterior mente se agregaran nuevos componentes de módulos en la paleta de common (comandos)
+Arrastramos el modulo que dice text o texto
+Hacemos clic en el menú DashBoard
+Y en la parte de Laout agréganos un tab
+Y sobre este tab otro
+Haciendo clic sobre la opción (+)
+Editamos los ajustes del primer tab haciendo clic sobre edit
+Y cambiamos el texto de name a Fecha damos clic en update.
+En el área de trabajo unimos los componentes del nuevo bloque de texto con el bloque de función
+Hacemos doble clic sobre el bloque texto
+Y cambiamos el texto de la etiqueta Label a: Time stamp interpretado.
+Y damos clic sobre done.
+Y hacemos deploy
+Y nos dirigimos al dashboard en hhtp:/localhost/1808/ui
+Se mostrará el resultado del flow 3 visualizando la fecha y la hora en una nueva página del navegador
 -------------------------------
 Por ultimo dar por ultimo hace deploy sobre los bloques timestamp y debug Y presionar (Seguir instrucciones)
 Instrucciones de operación
@@ -41,7 +64,45 @@ Resultados
 A continuación puede verse una vista previa del resultado de este flow. (Se debe exportar el flow)
 
 --------------------------
-Poner JSON
+[
+    {
+        "id": "745a983bf9c9ebe4",
+        "type": "ui_text",
+        "z": "71be123211e38ba6",
+        "group": "84e8ec8e1028a0cc",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Time Stamp interpretado",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 510,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "84e8ec8e1028a0cc",
+        "type": "ui_group",
+        "name": "Fecha",
+        "tab": "0719df874782259d",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0719df874782259d",
+        "type": "ui_tab",
+        "name": "Flow 3",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]
 --------------------------
 
 Evidencias
