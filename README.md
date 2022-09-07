@@ -28,7 +28,7 @@ Para ejecutar este flow, es necesario lo siguiente
 Arrancar NodeRed con el comando node-red Clonar el flow2 anteriormente Exportar el flow2 descargar JSON Importar flow Cambiar el nombre flow2 --> flow3 (Dando doble clic en el titulo) Agregar un bloque funtion Modificar orden: time stamp --> funtion --> debug Dar doble clic en el bloque funtion poner:
 
 // Lo que está después de “//” son comentarios // Crea un objeto Date a partir del payload enviado por timestamp var date = new Date(msg.payload); // Cambia el payload para que sea una fecha con formato msg.payload = date.toString(); // Regresa el mensaje para que se envíe al sigueinte nodo return msg; despues dar Done.
--------------------------------
+
 Se clona el flow 2 y se cambia el nombre a flow3
 Para ellos se importa y descarga flow2
 Movemos el bloque debug en el nuevo flow 3
@@ -53,7 +53,7 @@ Y damos clic sobre done.
 Y hacemos deploy
 Y nos dirigimos al dashboard en hhtp:/localhost/1808/ui
 Se mostrará el resultado del flow 3 visualizando la fecha y la hora en una nueva página del navegador
--------------------------------
+
 Por ultimo dar por ultimo hace deploy sobre los bloques timestamp y debug Y presionar (Seguir instrucciones)
 Instrucciones de operación
 
@@ -63,7 +63,6 @@ Resultados
 
 A continuación puede verse una vista previa del resultado de este flow. 
 
---------------------------
 [
     {
         "id": "745a983bf9c9ebe4",
@@ -105,7 +104,6 @@ A continuación puede verse una vista previa del resultado de este flow.
 ]
 ![image](https://user-images.githubusercontent.com/111370930/187046925-fb40dcc4-5eab-4121-bff0-2d264aabc3a4.png)
 
---------------------------
 
 Evidencias
 
